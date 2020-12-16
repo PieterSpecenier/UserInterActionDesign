@@ -55,6 +55,10 @@ html {
     box-sizing: inherit;
 }
 
+#mapid {
+    height: 100%;
+}
+
 /*
 * Remove text-shadow in selection highlight:
 * https://twitter.com/miketaylr/status/12228805301
@@ -310,117 +314,9 @@ body {
 }
 
 .c-app {
-    min-height: 100vh;
-    padding: 32px 32px 8px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    height: 100vh;
 }
 
-.c-app__summary {
-    font-size: 28px;
-    line-height: 40px;
-    opacity: 0;
-    transform: translateY(22px);
-    transition-property: opacity;
-    transition-duration: var(--transition-duration);
-    transition-timing-function: var(--transition-easing);
-}
-
-.is-loaded .c-app__summary {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.c-app__location {
-    opacity: 0;
-    transform: translateY(22px);
-    transition-property: opacity;
-    transition-duration: var(--transition-duration);
-    transition-timing-function: var(--transition-easing);
-}
-
-.is-loaded .c-app__location {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/*
-    Component: Horizon
-    ---
-    Horizon with sun visualisation
-*/
-
-.c-horizon {
-    /* margin-top: auto; */
-}
-
-.c-horizon__sky-wrapper {
-    position: relative;
-    height: 200px;
-    overflow: hidden;
-    padding: 22px 40px 0 0;
-}
-
-.c-horizon__sky {
-    position: relative;
-    height: 100%;
-}
-
-.c-horizon__sun {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    transform: translateY(22px);
-    transform: translateY(30px);
-    opacity: 0;
-    transition-property: transform, opacity;
-    transition-duration: var(--transition-duration);
-    transition-timing-function: var(--transition-easing);
-    transition-delay: calc(var(--transition-duration) / 5);
-}
-
-.is-loaded .c-horizon__sun {
-    opacity: 1;
-    transform: translateY(22px);
-}
-
-.c-horizon__sun::before {
-    content: attr(data-time);
-    margin-bottom: 8px;
-    font-size: 12px;
-    line-height: 14px;
-    text-align: center;
-}
-
-.c-horizon__line {
-    border-top: 1px solid var(--color-front);
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
-    justify-content: space-between;
-    padding-top: 8px;
-    margin-bottom: 32px;
-    opacity: 0;
-    transform: translateY(22px);
-    transition-property: opacity, border-color;
-    transition-duration: var(--transition-duration);
-    transition-timing-function: var(--transition-easing);
-}
-
-.is-loaded .c-horizon__line {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.c-horizon__time {
-    font-size: 12px;
-    line-height: 14px;
-
-}
 
 /*------------------------------------*\
 #UTILITIES
